@@ -35,6 +35,9 @@ LOCAL_REQUIRED_MODULES := \
 	FontSamsungOneSourceOverlay \
 	FontSonySketchSourceOverlay \
 	FontSurferSourceOverlay \
+	FontArbutusSourceOverlay \
+	FontArvoLatoOverlay \
+	FontRubikRubikOverlay \
 	IconPackCircularAndroidOverlay \
 	IconPackCircularPixelLauncherOverlay \
 	IconPackCircularPixelThemePickerOverlay \
