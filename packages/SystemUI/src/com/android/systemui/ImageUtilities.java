@@ -21,7 +21,6 @@ import android.graphics.drawable.GradientDrawable.Orientation;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.view.View;
 import android.renderscript.Element;
@@ -69,7 +68,7 @@ public class ImageUtilities {
 /* blur routine */
     public static Bitmap blurImage(Context context, Bitmap image) {
         float BITMAP_SCALE = 0.4f;
-        float BLUR_RADIUS = 7.5f;
+        float BLUR_RADIUS = 25f;
 
         int width = Math.round(image.getWidth() * BITMAP_SCALE);       
         int height = Math.round(image.getHeight() * BITMAP_SCALE);
