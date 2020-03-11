@@ -1285,21 +1285,19 @@ public class StatusBar extends SystemUI implements DemoMode,
     }
 
     public void updateBlurVisibility() {
+        float QSBlurAlpha = mNotificationPanel.getExpandedFraction();
 
-        int QSBlurAlpha = Math.round(255.0f * mNotificationPanel.getExpandedFraction());
-
-        if (QSBlurAlpha > 0 && !blurperformed && !mIsKeyguard) {
-            Bitmap bittemp = ImageUtilities.blurImage(mContext, ImageUtilities.screenshotSurface(mContext));
-            Drawable blurbackground = new BitmapDrawable(mContext.getResources(), bittemp);
+        if (QSBlurAlpha > 0f && !blurperformed && !mIsKeyguard) {
+            Bitmap blurBitmap = ImageUtilities.blurImage(mContext, ImageUtilities.screenshotSurface(mContext));
             blurperformed = true;
-            mQSBlurView.setBackgroundDrawable(blurbackground);
-        } else if (QSBlurAlpha == 0 || mState == StatusBarState.KEYGUARD) {
+            mQSBlurView.setImageBitmap(blurBitmap);
+            mQSBlurView.setVisibility(View.VISIBLE);
+        } else if (QSBlurAlpha == 0f || mState == StatusBarState.KEYGUARD) {
             blurperformed = false;
             dataupdated = false;
-            mQSBlurView.setBackgroundColor(Color.TRANSPARENT);
+            mQSBlurView.setVisibility(View.GONE);
         }
         mQSBlurView.setAlpha(QSBlurAlpha);
-        mQSBlurView.getBackground().setAlpha(QSBlurAlpha);
     }
 
     private void adjustBrightness(int x) {
