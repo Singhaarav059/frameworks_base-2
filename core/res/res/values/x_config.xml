@@ -265,4 +265,7 @@
      <!-- Whether to show a custom view for FOD -->
     <bool name="config_needCustomFODView">false</bool>
 
+    <!-- Enable face auth when swiping security view -->
+    <bool name="config_faceAuthOnSecurityView">false</bool>
+
 </resources>
