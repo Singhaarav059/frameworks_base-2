@@ -131,7 +131,7 @@ class ImageProcessHelper {
             int height = grayscale.getHeight();
 
             // TODO: Fine tune the performance here, tracking on b/123615079.
-            int[] histogram = new int[256];
+            int[] histogram = new int[ width * height ];
             for (int row = 0; row < height; row++) {
                 for (int col = 0; col < width; col++) {
                     int pixel = grayscale.getPixel(col, row);
@@ -167,12 +167,12 @@ class ImageProcessHelper {
         public float compute(Bitmap bitmap, int[] histogram) {
             float per85 = DEFAULT_THRESHOLD;
             int pixelCount = bitmap.getWidth() * bitmap.getHeight();
-            float[] acc = new float[256];
+            float[] acc = new float[pixelCount];
             for (int i = 0; i < acc.length; i++) {
                 acc[i] = (float) histogram[i] / pixelCount;
                 float prev = i == 0 ? 0f : acc[i - 1];
                 float next = acc[i];
-                float idx = (float) (i + 1) / 255;
+                float idx = (float) (i + 1) / (pixelCount - 1);
                 float sum = prev + next;
                 if (prev < 0.85f && sum >= 0.85f) {
                     per85 = idx;
