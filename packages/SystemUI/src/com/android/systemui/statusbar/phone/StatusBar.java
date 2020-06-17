@@ -1285,10 +1285,8 @@ public class StatusBar extends SystemUI implements DemoMode,
     }
 
     public void updateBlurVisibility() {
-        int QSUserAlpha = Settings.System.getInt(mContext.getContentResolver(),
-              Settings.System.QS_BLUR_ALPHA, 100);
-        int QSBlurAlpha = Math.round(255.0f *
-                mNotificationPanel.getExpandedFraction() * (float)((float) QSUserAlpha / 100.0));
+
+        int QSBlurAlpha = Math.round(255.0f * mNotificationPanel.getExpandedFraction());
 
         if (QSBlurAlpha > 0 && !blurperformed && !mIsKeyguard && isQSBlurEnabled()) {
             Bitmap bittemp = ImageUtilities.blurImage(mContext, ImageUtilities.screenshotSurface(mContext));
@@ -4818,9 +4816,6 @@ public class StatusBar extends SystemUI implements DemoMode,
             resolver.registerContentObserver(Settings.Secure.getUriFor(
                     Settings.Secure.CENTER_TEXT_CLOCK),
                     false, this, UserHandle.USER_ALL);
-            resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.QS_BLUR_ALPHA),
-                    false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.Secure.getUriFor(
                     Settings.Secure.SHOW_BACK_ARROW_GESTURE),
                     false, this, UserHandle.USER_ALL);
@@ -4880,8 +4875,6 @@ public class StatusBar extends SystemUI implements DemoMode,
                     uri.equals(Settings.Secure.getUriFor(Settings.Secure.LOCKSCREEN_DATE_SELECTION)) ||
                     uri.equals(Settings.Secure.getUriFor(Settings.Secure.CENTER_TEXT_CLOCK))) {
                 updateKeyguardStatusSettings();
-            } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_BLUR_ALPHA))) {
-                updateBlurVisibility();
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_USE_NEW_TINT)) ||
                     uri.equals(Settings.System.getUriFor(Settings.System.QS_LABEL_USE_NEW_TINT))) {
                 mQSPanel.getHost().reloadAllTiles();
