@@ -6191,10 +6191,10 @@ public final class Settings {
         public static final String LOCKSCREEN_CHARGING_ANIMATION = "lockscreen_charging_animation";
 
         /**
-         * Screenrecord: audio source
+         * Screenrecord: enable mic
          * @hide
          */
-        public static final String SCREENRECORD_AUDIO_SOURCE = "screenrecord_audio_source";
+        public static final String SCREENRECORD_ENABLE_MIC = "screenrecord_enable_mic";
 
         /**
          * Screenrecord: show taps
