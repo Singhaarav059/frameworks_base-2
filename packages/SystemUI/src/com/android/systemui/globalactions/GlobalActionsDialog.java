@@ -93,7 +93,6 @@ import com.android.internal.statusbar.IStatusBarService;
 import com.android.internal.telephony.TelephonyIntents;
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.internal.util.EmergencyAffordanceManager;
-import com.android.internal.util.ScreenRecordHelper;
 import com.android.internal.util.ScreenshotHelper;
 import com.android.internal.view.RotationPolicy;
 import com.android.internal.widget.LockPatternUtils;
@@ -194,7 +193,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
     private final boolean mShowSilentToggle;
     private final EmergencyAffordanceManager mEmergencyAffordanceManager;
     private final ScreenshotHelper mScreenshotHelper;
-    private final ScreenRecordHelper mScreenRecordHelper;
     private final ActivityStarter mActivityStarter;
     private GlobalActionsPanelPlugin mPanelPlugin;
     private boolean mTorchEnabled = false;
@@ -239,7 +237,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
         mEmergencyAffordanceManager = new EmergencyAffordanceManager(context);
         mScreenshotHelper = new ScreenshotHelper(context);
-        mScreenRecordHelper = new ScreenRecordHelper(context);
 
         Dependency.get(ConfigurationController.class).addCallback(this);
 
@@ -808,9 +805,9 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         }
     }
 
-    private class ScreenshotAction extends SinglePressAction implements LongPressAction {
+    private class ScreenshotAction extends SinglePressAction {
         public ScreenshotAction() {
-            super(R.drawable.ic_screenshot, com.android.systemui.R.string.global_action_screenshot_cust);
+            super(R.drawable.ic_screenshot, R.string.global_action_screenshot);
         }
 
         @Override
@@ -841,17 +838,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         @Override
         public boolean showBeforeProvisioning() {
             return false;
-        }
-
-        @Override
-        public boolean onLongPress() {
-            //if (FeatureFlagUtils.isEnabled(mContext, FeatureFlagUtils.SCREENRECORD_LONG_PRESS)) {
-                mDialog.dismiss();
-                mScreenRecordHelper.launchRecordPrompt();
-            /*} else {
-                onPress();
-            }*/
-            return true;
         }
     }
 
