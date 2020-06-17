@@ -6209,10 +6209,10 @@ public final class Settings {
         public static final String SCREENRECORD_STOP_DOT = "screenrecord_stop_dot";
 
         /**
-         * Screenrecord: video bitrate
+         * Screenrecord: low quality
          * @hide
          */
-        public static final String SCREENRECORD_VIDEO_BITRATE = "screenrecord_video_bitrate";
+        public static final String SCREENRECORD_LOW_QUALITY = "screenrecord_low_quality";
 
         /**
          * Whether to enable Ambient edge light
