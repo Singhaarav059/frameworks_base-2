@@ -6570,14 +6570,6 @@ public final class Settings {
         private static final Validator FORCE_FULLSCREEN_CUTOUT_APPS_VALIDATOR = ANY_STRING_VALIDATOR;
 
         /**
-         * QS blur alpha
-         * @hide
-         */
-        public static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
-        /** @hide */
-        private static final Validator QS_BLUR_INTENSITY_VALIDATOR = ANY_INTEGER_VALIDATOR;
-
-        /**
          * Which Vibration Pattern to use
          * 0: dzzz-dzzz
          * 1: dzzz-da
@@ -7063,7 +7055,6 @@ public final class Settings {
             QS_BLUR_ALPHA,
             GESTURE_PILL_TOGGLE,
             FORCE_FULLSCREEN_CUTOUT_APPS,
-            QS_BLUR_INTENSITY,
             NAVIGATION_BAR_ARROW_KEYS,
             NAVIGATION_HANDLE_WIDTH,
             CUSTOM_BUTTON_EXTRA_KEY_MAPPING,
@@ -7513,7 +7504,6 @@ public final class Settings {
             VALIDATORS.put(QS_BLUR_ALPHA, QS_BLUR_ALPHA_VALIDATOR);
             VALIDATORS.put(GESTURE_PILL_TOGGLE, GESTURE_PILL_TOGGLE_VALIDATOR);
             VALIDATORS.put(FORCE_FULLSCREEN_CUTOUT_APPS, FORCE_FULLSCREEN_CUTOUT_APPS_VALIDATOR);
-            VALIDATORS.put(QS_BLUR_INTENSITY, QS_BLUR_INTENSITY_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_ARROW_KEYS,
                     NAVIGATION_BAR_ARROW_KEYS_VALIDATOR);
             VALIDATORS.put(NAVIGATION_HANDLE_WIDTH, NAVIGATION_HANDLE_WIDTH_VALIDATOR);
