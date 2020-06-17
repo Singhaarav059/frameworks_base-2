@@ -6532,14 +6532,6 @@ public final class Settings {
         */
         public static final String SETTING_BUTTON_TOGGLE = "setting_button_toggle";
 
-        /**
-         * QS blur
-         * @hide
-         */
-        public static final String QS_BLUR = "qs_blur";
-        /** @hide */
-        private static final Validator QS_BLUR_VALIDATOR = BOOLEAN_VALIDATOR;
-
         /** @hide */
         public static final String GESTURE_PILL_TOGGLE = "gesture_pill_toggle";
 
@@ -7043,7 +7035,6 @@ public final class Settings {
             STATUS_BAR_TICKER_ANIMATION_MODE,
             STATUS_BAR_TICKER_TICK_DURATION,
             USE_OLD_MOBILETYPE,
-            QS_BLUR,
             GESTURE_PILL_TOGGLE,
             FORCE_FULLSCREEN_CUTOUT_APPS,
             NAVIGATION_BAR_ARROW_KEYS,
@@ -7491,7 +7482,6 @@ public final class Settings {
             VALIDATORS.put(STATUS_BAR_TICKER_TICK_DURATION,
                     STATUS_BAR_TICKER_TICK_DURATION_VALIDATOR);
             VALIDATORS.put(USE_OLD_MOBILETYPE, USE_OLD_MOBILETYPE_VALIDATOR);
-            VALIDATORS.put(QS_BLUR, QS_BLUR_VALIDATOR);
             VALIDATORS.put(GESTURE_PILL_TOGGLE, GESTURE_PILL_TOGGLE_VALIDATOR);
             VALIDATORS.put(FORCE_FULLSCREEN_CUTOUT_APPS, FORCE_FULLSCREEN_CUTOUT_APPS_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_ARROW_KEYS,
