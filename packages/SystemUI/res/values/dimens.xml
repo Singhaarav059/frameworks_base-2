@@ -361,7 +361,7 @@
     <dimen name="qs_footer_margin">2dp</dimen>
 
     <!-- Padding on each QS Footer Icon to make the icons 20dpx20dp -->
-    <dimen name="qs_footer_icon_padding">14dp</dimen>
+    <dimen name="qs_footer_icon_padding">8dp</dimen>
 
     <!-- The padding between the notifications and the quick settings container -->
     <dimen name="qs_notification_padding">@dimen/notification_side_paddings</dimen>
@@ -394,7 +394,7 @@
     <!-- The width of the panel that holds the quick settings. -->
     <dimen name="qs_panel_width">@dimen/notification_panel_width</dimen>
 
-    <dimen name="quick_qs_drag_handle_height">20dp</dimen>
+    <dimen name="quick_qs_drag_handle_height">16dp</dimen>
 
     <dimen name="volume_dialog_panel_transparent_padding_right">4dp</dimen>
 
@@ -435,7 +435,7 @@
     <!-- The size of the gesture span needed to activate the "pull" notification expansion -->
     <dimen name="pull_span_min">25dp</dimen>
 
-    <dimen name="qs_tile_height">106dp</dimen>
+    <dimen name="qs_tile_height">98dp</dimen>
     <dimen name="qs_tile_layout_margin_side">6dp</dimen>
     <dimen name="qs_tile_margin_horizontal">18dp</dimen>
     <dimen name="qs_tile_margin_vertical">24dp</dimen>
@@ -449,7 +449,7 @@
     <dimen name="qs_tile_margin_top">18dp</dimen>
     <dimen name="qs_tile_background_size">44dp</dimen>
     <dimen name="qs_quick_tile_size">48dp</dimen>
-    <dimen name="qs_quick_tile_padding">12dp</dimen>
+    <dimen name="qs_quick_tile_padding">8dp</dimen>
     <dimen name="qs_header_gear_translation">16dp</dimen>
     <dimen name="qs_header_tile_margin_horizontal">4dp</dimen>
     <dimen name="qs_page_indicator_width">16dp</dimen>
@@ -457,13 +457,13 @@
     <dimen name="qs_tile_icon_size">24dp</dimen>
     <dimen name="qs_tile_text_size">12sp</dimen>
     <dimen name="qs_tile_divider_height">1dp</dimen>
-    <dimen name="qs_panel_padding">16dp</dimen>
+    <dimen name="qs_panel_padding">12dp</dimen>
     <dimen name="qs_dual_tile_height">112dp</dimen>
     <dimen name="qs_dual_tile_padding_vertical">8dp</dimen>
     <dimen name="qs_dual_tile_padding_horizontal">6dp</dimen>
     <dimen name="qs_tile_padding_top">14dp</dimen>
     <dimen name="qs_tile_padding_top_large_text">4dp</dimen>
-    <dimen name="qs_tile_padding_bottom">16dp</dimen>
+    <dimen name="qs_tile_padding_bottom">12dp</dimen>
     <dimen name="qs_tile_spacing">4dp</dimen>
     <dimen name="qs_panel_padding_bottom">0dp</dimen>
     <dimen name="qs_panel_padding_top">@dimen/qs_header_tooltip_height</dimen>
