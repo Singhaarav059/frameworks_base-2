@@ -394,7 +394,7 @@
     <!-- The width of the panel that holds the quick settings. -->
     <dimen name="qs_panel_width">@dimen/notification_panel_width</dimen>
 
-    <dimen name="quick_qs_drag_handle_height">16dp</dimen>
+    <dimen name="quick_qs_drag_handle_height">12dp</dimen>
 
     <dimen name="volume_dialog_panel_transparent_padding_right">4dp</dimen>
 
@@ -490,7 +490,7 @@
     <dimen name="qs_detail_item_icon_width">32dp</dimen>
     <dimen name="qs_detail_item_icon_marginStart">0dp</dimen>
     <dimen name="qs_detail_item_icon_marginEnd">20dp</dimen>
-    <dimen name="qs_header_tooltip_height">40dp</dimen>
+    <dimen name="qs_header_tooltip_height">35dp</dimen>
     <dimen name="qs_header_alarm_icon_size">@dimen/status_bar_icon_drawing_size</dimen>
     <dimen name="qs_header_mobile_icon_size">@dimen/status_bar_icon_drawing_size</dimen>
     <dimen name="qs_header_alarm_text_margin_start">6dp</dimen>
@@ -502,8 +502,8 @@
     <dimen name="qs_footer_padding_end">16dp</dimen>
     <dimen name="qs_footer_icon_size">16dp</dimen>
     <dimen name="qs_paged_tile_layout_padding_bottom">0dp</dimen>
-    <dimen name="qs_header_top_padding">15dp</dimen>
-    <dimen name="qs_header_bottom_padding">14dp</dimen>
+    <dimen name="qs_header_top_padding">10dp</dimen>
+    <dimen name="qs_header_bottom_padding">10dp</dimen>
 
     <dimen name="qs_notif_collapsed_space">64dp</dimen>
 
